@@ -9,7 +9,6 @@
 /* configuracion del body */
 body{
     font-family: 'Roboto', sans-serif;
-    margin: 30px;
 }
 
 /* Contenedor principal del index*/
@@ -117,9 +116,9 @@ body{
 }
 
 /* estilos de los links */
-.nav{
-    color: #fff;
+.nav__link{
     text-decoration: none;
+    color: #fff;
     font-size: 1.2rem;
     letter-spacing: 2px;  
 }
