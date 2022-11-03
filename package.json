@@ -1,0 +1,25 @@
+{
+  "name": "preentrega3dominguez",
+  "version": "1.0.0",
+  "description": "Proyecto entrega nro 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvp2023/PreEntrega2Dominguez.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Nestor Dominguez",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mvp2023/PreEntrega2Dominguez/issues"
+  },
+  "homepage": "https://github.com/mvp2023/PreEntrega2Dominguez#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
