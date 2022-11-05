@@ -1,0 +1,219 @@
+/* Seteo de margenes*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* configuracion del body */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor principal del index*/
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* background de la pagina*/
+.fondoprincipal {
+  background-image: url("../imagenes/portada.JPG");
+  background-size: cover;
+  min-height: 500px;
+  height: 100vh;
+}
+
+/* Grid del menu principal */
+.nav {
+  --state-close: scale(0);
+  --state-hamburguer:scale(1);
+  --state-menu: translate(-100%);
+  padding: 40px 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+}
+
+/* evento target */
+.nav:target {
+  --state-menu: translate(0);
+  --state-close: scale(1);
+  --state-hamburguer:scale(0);
+}
+
+/* Propiedades del Contenedor logo*/
+.nav__logo {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+/* llamada al evento animation de la imagen logo*/
+.nav__logo img {
+  width: 150px;
+  -webkit-animation: rotacion 8s infinite linear;
+          animation: rotacion 8s infinite linear;
+}
+
+/* Rotacion de la imagen logo*/
+@-webkit-keyframes rotacion {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+@keyframes rotacion {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+/* Transicion entre el menu de navegacion y el menu contraible */
+.nav__hamburguer,
+.nav__close {
+  cursor: pointer;
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  transition: 0.4s transform;
+}
+
+/* Cambio de estado del menu contraible */
+.nav__hamburguer {
+  transform: var(--state-hamburguer);
+}
+
+/* Cambio de estado del menu navegacion */
+.nav__close {
+  transform: var(--state-close);
+}
+
+/* Ancho de los icono del menu */
+.nav__icon {
+  width: 40px;
+}
+
+/* Configuracion de los items del menu */
+.nav__links {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  display: grid;
+  align-content: center;
+  gap: 2em;
+  padding-left: 5%;
+  transform: var(--state-menu);
+  transition: 0.3s transform;
+}
+
+/* Quita de estilos de los item */
+.nav__item {
+  list-style: none;
+}
+
+/* estilos de los links */
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+/* mobile first responsive*/
+@media (min-width: 768px) {
+  .nav {
+    --state-hamburguer:scale(0);
+    --state-menu: translate(0);
+  }
+  .nav:target {
+    --state-close: scale(0);
+  }
+  .nav__links {
+    padding: 0;
+    background-color: unset;
+    position: unset;
+    gap: 1.5em;
+    grid-auto-flow: column;
+    transform: unset;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+  }
+  .nav__link {
+    font-size: 1rem;
+    letter-spacing: none;
+  }
+  .nav__link:hover {
+    -webkit-animation: letra 1.5s infinite;
+            animation: letra 1.5s infinite;
+    font-size: larger;
+  }
+  @-webkit-keyframes letra {
+    0% {
+      color: darkseagreen;
+      font-size: 1.25rem;
+    }
+    33% {
+      color: aquamarine;
+      font-size: 1.3rem;
+    }
+    66% {
+      color: greenyellow;
+      font-size: 1.25rem;
+    }
+    100% {
+      color: yellow;
+      font-size: 1.2rem;
+    }
+  }
+  @keyframes letra {
+    0% {
+      color: darkseagreen;
+      font-size: 1.25rem;
+    }
+    33% {
+      color: aquamarine;
+      font-size: 1.3rem;
+    }
+    66% {
+      color: greenyellow;
+      font-size: 1.25rem;
+    }
+    100% {
+      color: yellow;
+      font-size: 1.2rem;
+    }
+  }
+}
+/* Fondo de pantalla del menu*/
+.opaco {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imagenes/portadaopaca.JPG");
+}
+
+/* Imagenes de las redes sociales instagram y facebook */
+.redes img {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Definicion del pie de pagina */
+footer {
+  margin: top 50px;
+  text-align: center;
+  bottom: 0;
+  height: 40px;
+  background-color: bisque;
+}/*# sourceMappingURL=styles.css.map */

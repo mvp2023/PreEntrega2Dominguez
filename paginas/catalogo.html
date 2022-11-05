@@ -1,100 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
     
-    <!-- Titulo de la pagina -->
-    <title>Menu Principal</title>
+    
+    <!--Estilos de CSS-->
+    <link rel="stylesheet" href="../scss/styles.css">
+    
+    <!--fuentes de google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    
+</head>
 
-    <!-- Fondo de la pagina -->
-    <body class="opaco">
+<body class="opaco">
 
-        <header>
-            
-            <!-- Logo de la empresa -->
-            <div class="logo">
-                <img src="imagenes/NewLogoBerayah.png" alt="Berayah" >
-            </div>  
+    <header >
 
-            <!-- Menu de navegacion     -->
-            <nav class="menu">
-                <a href="historia.html" class="nav-link">Nuestra historia</a>
-                <a href="catalogo.html" class="nav-link">Catalogo</a>
-                <a href="ofertas.html" class="nav-link">Ofertas</a>
-                <a href="contacto.html" class="nav-link">Contacto</a>
-                <img src="imagenes/busqueda.png" width="20" height="20" top="10" >
-                <input type="text" placeholder="Buscar">
-            </nav> 
+        <!-- Contenedor principal de Menu de navegacion -->
+        <nav class="nav container" id="nav">
 
-        </header>    
-       
-        <!-- Titulo del cuerpo de la pagina catalogo -->
-        <h1>Catalogo de accesorios</h1>
-        
-        <!-- Menu secundario de la pagina catalogo -->
-        <div class="menu_catalogo"> 
-            <ul>
-                <li class="soportes_celular"><a href="#" style="color:blue">Soportes para celular</a></li>
-                <li class="soportes_tablets"><a href="#" style="color:blue">Soportes para tablets</a></li>
-                <li class="atriles"><a href="#" style="color:blue"></a>Atriles</a></li>
-                <li class="portalapiceras"><a href="#" style="color:blue"></a>Portalapiceras</a></li>
-                <li class="posa_vasos"><a href="#" style="color:blue"></a>Posa vasos</a></li>
-                <li class="soportes_varios"><a href="#" style="color:blue"></a>Soportes varios</a></li>
+            <!--imagen logo-->
+            <h2 class="nav__logo"><img src="../imagenes/NewLogoBerayah.png" alt="Berayah"></h2>
+
+            <!-- items del menu -->
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../paginas/historia.html" class="nav__link">Nuestra historia</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../paginas/catalogo.html" class="nav__link">Catalogo</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../paginas/ofertas.html" class="nav__link">Ofertas</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../paginas/contacto.html" class="nav__link">Contacto</a>
+                </li>
+    
             </ul>
 
-            <!-- Boton agregar al carrito del menu catalogo -->
-            <input type="button" value="Agregar al carrito">        
-        </div>
+            <!-- imagen del icono menu contraible-->
+            <a href="#nav" class="nav__hamburguer">
+                <img src="../imagenes/menu.svg" class="nav__icon">
+            </a>
 
-        <div class="vector_catalogo">
+            <!-- imagen del icono -->
+            <a href="#" class="nav__close">
+                <img src="../imagenes/close.svg" class="nav__icon">
+            </a>
 
-            <!-- Imagenes del menu catalogo-->
-            
-            <!--Primera Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Soporte horizontal #1</p></div>
-                <div><img src="imagenes/soporte1.jpg"></div>
-            </div>
-            
-            <!--Segunda Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Soporte horizontal #2</p></div>
-                <div><img src="imagenes/soporte2.jpg"></div>
-            </div>
-            
-            <!--Tercera Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Soporte vertical #1</p></div>
-                <div><img src="imagenes/soporte3.jpg"></div>
-            </div>
+        </nav>
 
-            <!--Cuarta Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Soporte vertical #2</p></div>
-                <div><img src="imagenes/soporte4.jpg"></div>
-            </div>
+    </header>
 
-            <!-- Quinta Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Atril #1</p></div>
-                <div><img src="imagenes/atril1.jpg"></div>
-            </div>
 
-            <!-- Sexta Imagen-->
-            <div class="contenedor_catalogo">
-                <div><p>Atril #2</p></div>
-                <div><img src="imagenes/atril2.jpg"></div>
-            </div>
-            
-        </div>
-        
-        <!-- Pie de pagina -->
-        <footer> 
-            <p style="text-align:center">Copyright© 2020 - 2022 BerayahAccesorios Derechos Reservados</p>
-        </footer>
-
-    </body>
 </html>
+
