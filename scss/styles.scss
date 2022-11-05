@@ -22,9 +22,8 @@ body{
 .fondoprincipal{
     background-image: url('../imagenes/portada.JPG');
     background-size: cover;
-    min-height: 500px;                    
-    height: 100vh;
-}
+    background-repeat: no-repeat;
+    }
 
 /* Grid del menu principal */
 .nav{
@@ -186,10 +185,13 @@ body{
 }
 
 /* Imagenes de las redes sociales instagram y facebook */
-.redes img{
-    height: 24px;
-    width: 24px;
-    text-align:center;
+.redes {
+    img{
+        height: 24px;
+        width: 24px;
+        text-align:center;
+    }
+    
 }
 
 /* Definicion del pie de pagina */
@@ -201,4 +203,22 @@ footer{
     background-color: bisque;
 }
 
+.slider{
+    
+    background-position: 70% 150px, cover;
+    background-repeat: no-repeat;
+
+}
+
+.fav{
+    width: 24px;
+    height: 24px;
+}
+
+#galeria {
+    img{
+        width: 100%;
+        height: 300px;
+    }
+}
 
