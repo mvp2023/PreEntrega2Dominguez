@@ -281,4 +281,16 @@ footer {
 #titulocontacto {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.CuerpoHistoria {
+  margin: 20px;
+  padding: 10px;
+  margin: auto;
+}
+.CuerpoHistoria #fotohistoria {
+  width: 700px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */
