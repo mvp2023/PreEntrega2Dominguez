@@ -1,17 +1,18 @@
 /* Seteo de margenes*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* configuracion del body */
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
 /* Contenedor principal del index*/
-.container{
+.container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
@@ -19,16 +20,16 @@ body{
 }
 
 /* background de la pagina*/
-.fondoprincipal{
+.fondoprincipal {
     background-image: url('../imagenes/portada.JPG');
     background-size: cover;
     background-repeat: no-repeat;
-    }
+}
 
 /* Grid del menu principal */
-.nav{
+.nav {
     --state-close: scale(0);
-    --state-hamburguer:scale(1);
+    --state-hamburguer: scale(1);
     --state-menu: translate(-100%);
 
     padding: 40px 0;
@@ -39,20 +40,15 @@ body{
 }
 
 /* evento target */
-.nav:target{
+.nav:target {
     --state-menu: translate(0);
     --state-close: scale(1);
-    --state-hamburguer:scale(0);
+    --state-hamburguer: scale(0);
 }
 
-/* Propiedades del Contenedor logo*/
-.nav__logo{
-    font-size: 2.5rem;
-    z-index: 1;
-}
 
 /* llamada al evento animation de la imagen logo*/
-.nav__logo img{
+.nav__logo {
     width: 150px;
     animation: rotacion 8s infinite linear;
 }
@@ -60,16 +56,17 @@ body{
 /* Rotacion de la imagen logo*/
 @keyframes rotacion {
     from {
-      transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
-    to {
-      transform: rotateY(359deg);
-    }
-} 
 
-/* Transicion entre el menu de navegacion y el menu contraible */ 
-.nav__hamburguer, 
-.nav__close{
+    to {
+        transform: rotateY(359deg);
+    }
+}
+
+/* Transicion entre el menu de navegacion y el menu contraible */
+.nav__hamburguer,
+.nav__close {
     cursor: pointer;
     grid-column: -2/-1;
     grid-row: 1/2;
@@ -77,22 +74,22 @@ body{
 }
 
 /* Cambio de estado del menu contraible */
-.nav__hamburguer{
+.nav__hamburguer {
     transform: var(--state-hamburguer);
 }
 
 /* Cambio de estado del menu navegacion */
-.nav__close{
+.nav__close {
     transform: var(--state-close);
 }
 
 /* Ancho de los icono del menu */
-.nav__icon{
+.nav__icon {
     width: 40px;
 }
 
 /* Configuracion de los items del menu */
-.nav__links{
+.nav__links {
     background-color: #000;
     position: absolute;
     top: 0;
@@ -109,30 +106,30 @@ body{
 }
 
 /* Quita de estilos de los item */
-.nav__item{
+.nav__item {
     list-style: none;
 }
 
 /* estilos de los links */
-.nav__link{
+.nav__link {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-    letter-spacing: 2px;  
+    letter-spacing: 2px;
 }
 
 /* mobile first responsive*/
 @media (min-width:768px) {
-    .nav{
-        --state-hamburguer:scale(0);
+    .nav {
+        --state-hamburguer: scale(0);
         --state-menu: translate(0);
     }
 
-    .nav:target{
+    .nav:target {
         --state-close: scale(0);
     }
 
-    .nav__links{
+    .nav__links {
         padding: 0;
         background-color: unset;
         position: unset;
@@ -143,12 +140,12 @@ body{
         grid-row: 1/2;
     }
 
-    .nav__link{
+    .nav__link {
         font-size: 1rem;
         letter-spacing: none;
     }
 
-    .nav__link:hover{
+    .nav__link:hover {
         animation: letra 1.5s infinite;
         font-size: larger;
     }
@@ -158,27 +155,28 @@ body{
             color: darkseagreen;
             font-size: 1.25rem;
         }
+
         33% {
             color: aquamarine;
-            font-size: 1.3rem;    
+            font-size: 1.3rem;
         }
-        66%
-            {
+
+        66% {
             color: greenyellow;
             font-size: 1.25rem;
-            }
-        100%
-            {
-                color: yellow;
-                font-size: 1.2rem;
-            }
-        
+        }
+
+        100% {
+            color: yellow;
+            font-size: 1.2rem;
+        }
+
     }
 }
 
 
 /* Fondo de pantalla del menu*/
-.opaco{
+.opaco {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../imagenes/portadaopaca.JPG");
@@ -186,39 +184,92 @@ body{
 
 /* Imagenes de las redes sociales instagram y facebook */
 .redes {
-    img{
+    padding-top: 50px;
+    padding-left: 10px;
+    img {
         height: 24px;
         width: 24px;
-        text-align:center;
+        text-align: center;
     }
-    
+
+}
+
+/*direccion de la empresa*/
+.direccion_redes{
+    padding-top: 50px;
+    padding-left: 10px; 
 }
 
 /* Definicion del pie de pagina */
-footer{
+footer {
+    overflow: hidden;
     margin: top 50px;
     text-align: center;
-    bottom: 0;
+    bottom: 10px;
     height: 40px;
     background-color: bisque;
 }
 
-.slider{
-    
-    background-position: 70% 150px, cover;
-    background-repeat: no-repeat;
-
-}
-
-.fav{
+/*tamaño de los iconos*/
+.fav {
     width: 24px;
     height: 24px;
 }
 
+/*Galeria de la seccion ofertas*/
+/*uso de anidacion*/
 #galeria {
-    img{
+    img {
         width: 100%;
         height: 300px;
+        object-fit: cover;
     }
 }
 
+
+/* Ajuste de las imagenes al carrousel */
+.imagencatalogo {
+    height: 400px;
+    max-width: 600px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Modificacion de estilos del carrousel */
+/*uso de anidacion*/
+#carouselExample{
+    object-fit: cover;
+    h5, p{
+        color: white;    
+    }
+    .bgwhite{
+        color: black;
+    }
+}
+
+/*formulario de contacto*/
+/*uso de anidacion y del &*/
+.formulario{
+
+    .form-control{
+        border-color: blueviolet;
+        font-weight: 400;
+        font-size: large;
+        background-color: rgb(158, 235, 210);
+        text-decoration: double;
+        text-align: center;
+    }
+    #botonenviar{  
+        &:hover{
+            background: white;
+            transition: 0.2s;
+            box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+        }      
+    }
+}
+
+/* posicionamiento del titulo del menu contacto*/
+#titulocontacto{
+    text-align:center;
+    margin-bottom: 40px;
+}

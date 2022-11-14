@@ -3,6 +3,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Soportes y accesorios Berayah">
+        <meta name="keywords" content="soportes, atriles, accesorios, celulares, madera">
+    
     
         <title>Contacto</title>
 
@@ -19,11 +22,54 @@
 
     <body class="opaco">
 
+        <header >
+
+            <!-- Contenedor principal de Menu de navegacion -->
+            <nav class="nav container px-5" id="nav">
+    
+                <!--imagen logo-->
+                <img class="nav__logo" src="../imagenes/Logo.png" alt="Berayah">
+    
+                <!-- items del menu -->
+                <ul class="nav__links">
+    
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../paginas/historia.html" class="nav__link">Nuestra historia</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../paginas/catalogo.html" class="nav__link">Catalogo</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../paginas/ofertas.html" class="nav__link">Ofertas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../paginas/contacto.html" class="nav__link">Contacto</a>
+                    </li>
+        
+                </ul>
+    
+                <!-- imagen del icono menu contraible-->
+                <a href="#nav" class="nav__hamburguer">
+                    <img src="../imagenes/menu.svg" class="nav__icon" alt="boton menu">
+                </a>
+    
+                <!-- imagen del icono -->
+                <a href="#" class="nav__close">
+                    <img src="../imagenes/close.svg" class="nav__icon" alt="boton cerrar">
+                </a>
+    
+            </nav>
+    
+        </header>
+
         <!-- Seccion principal del formulario -->
         <h1 id="tituloContacto">Formulario de Contacto</h1>
  
         <!--Formulario responsive de bootstrap-->
-        <form class="row g-3" >
+        <form class="row g-3 formulario px-2" >
  
             <div class="col-md-4 position-relative">
                 <label class="form-label">Nombre</label>
@@ -50,13 +96,11 @@
                 <textarea class="form-control" rows="3" >escribe tu mensaje aqui....</textarea>
             </div> 
  
-            <div class="col-6">
-                <button class="btn btn-primary" type="submit">Enviar</button>
+            <div class="col-md-8">
+                <button class="btn btn-bd-accent" id="botonenviar" type="submit">Enviar</button>
             </div>
 
-            <div class="col-4">
-                <a href="../index.html" class="btn btn-primary" type="submit">Volver al Inicio</a>
-            </div>
+           
      </form>
      
     <!-- Redes sociales -->
