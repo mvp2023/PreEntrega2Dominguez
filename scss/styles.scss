@@ -194,6 +194,7 @@ body {
 
 }
 
+
 /*direccion de la empresa*/
 .direccion_redes{
     padding-top: 50px;
@@ -203,11 +204,13 @@ body {
 /* Definicion del pie de pagina */
 footer {
     overflow: hidden;
-    margin: top 50px;
-    text-align: center;
-    bottom: 10px;
-    height: 40px;
+    height: 30px;
     background-color: bisque;
+    margin-top: 30px;
+    
+    p{
+        text-align: center;
+    }
 }
 
 /*tamaño de los iconos*/
@@ -284,4 +287,11 @@ footer {
         height: 350px;
         object-fit: cover;
         }
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }

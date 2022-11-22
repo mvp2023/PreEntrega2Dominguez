@@ -98,6 +98,7 @@ body {
 /* Configuracion de los items del menu */
 .nav__links {
   background-color: #000;
+  z-index: 10;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -217,11 +218,12 @@ body {
 /* Definicion del pie de pagina */
 footer {
   overflow: hidden;
-  margin: top 50px;
-  text-align: center;
-  bottom: 10px;
-  height: 40px;
+  height: 30px;
   background-color: bisque;
+  margin-top: 30px;
+}
+footer p {
+  text-align: center;
 }
 
 /*tamaño de los iconos*/
@@ -293,4 +295,11 @@ footer {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }/*# sourceMappingURL=styles.css.map */
